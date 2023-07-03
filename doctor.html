@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doctors Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .logo {
+      background: none;
+    }
+    
+    .logo img {
+      max-width: 150px;
+      background-color: transparent;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #095a02;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .doctor-card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: inline-block;
+      width: 300px;
+    }
+    
+    .doctor-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    
+    .doctor-card h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: left; /* Added */
+    }
+    
+    .doctor-card p {
+      font-size: 14px;
+      margin: 5px 0;
+      text-align: left; /* Added */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="hms.jpg" alt="Hospital Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="doctor.html">Doctors</a></li>
+        <li><a href="Registration.html">Registration</a></li>
+        <li><a href="appointment.html">Appointments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1>Doctors</h1>
+
+  <div class="container">
+    <div class="doctor-card">
+      <h2>Dr. Ali Amour</h2>
+      <p>Specialty: Cardiology</p>
+      <p>Experience: 10 years</p>
+      <p>Location: Children Hospital</p>
+    </div>
+
+    <div class="doctor-card">
+      <h2>Dr. Nawfal</h2>
+      <p>Specialty: Pediatrics</p>
+      <p>Experience: 8 years</p>
+      <p>Location: Otorhinolaryngology Hospital</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="doctor-card">
+      <h2>Dr. Shaaban</h2>
+      <p>Specialty: Surgeon</p>
+      <p>Experience: 8 years</p>
+      <p>Location: Operating Theater</p>
+    </div>
+
+    <div class="doctor-card">
+      <h2>Dr. Fatma</h2>
+      <p>Specialty: Gynecologist</p>
+      <p>Experience: 15 years</p>
+      <p>Location: Gynecology Hospital</p>
+    </div>
+  </div>
+
+</body>
+</html>
