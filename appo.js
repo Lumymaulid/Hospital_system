@@ -4,6 +4,8 @@ const dateInput = document.getElementById('date-input');
 const timeInput = document.getElementById('time-input');
 const doctorSelect = document.getElementById('doctor-select');
 const submitButton = document.getElementById('submit-button');
+const appointmentData = getAppointmentData(); // Replace this with your actual data retrieval logic
+res.render('appointment', { appointment: appointmentData });
 
 // Add event listener to the form submit
 appointmentForm.addEventListener('submit', (e) => {
@@ -20,9 +22,6 @@ appointmentForm.addEventListener('submit', (e) => {
     return;
   }
 
-  // Perform further processing or make API calls
-  // Here you can handle the appointment scheduling logic
-  // For example, you can send the selected values to the server for processing or update the database
   
   // Display success message
   alert('Appointment scheduled successfully!');
