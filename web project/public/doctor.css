@@ -1,0 +1,35 @@
+.doctor-section {
+    margin-bottom: 20px;
+  }
+  
+  .doctor-profile img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  .doctor-profile h2 {
+    margin-top: 10px;
+  }
+  
+  .doctor-schedule ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .appointment-form label,
+  .appointment-form input,
+  .appointment-form textarea,
+  .appointment-form button {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .patient-reviews ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  /* Additional styling and customization can be added as per your design requirements */
+  
+  

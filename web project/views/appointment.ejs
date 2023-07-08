@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appointment Form</title>
+  <script src="/appointment.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    .logo {
+  background: none;
+
+}
+
+.logo img {
+  max-width: 150px;
+  background-color: transparent;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #095a02;
+}
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #090909;
+    }
+
+    input[type="date"],
+    input[type="time"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color:#095a02;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #patient-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    #patient-table th,
+    #patient-table td {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #patient-table th {
+      background-color: #f2f2f2;
+    }
+
+    #patient-table tr:hover {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="hms.jpg" alt="Hospital Logo">
+    </div>
+    <nav>
+      <ul>
+        
+        <li><a href="/">Home Page</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/doctor">Doctors</a></li>
+        <li><a href="/register">Registration</a></li>
+        <li><a href="/appointment">Appointments</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1 style="color: #095a02;">Appointment Form</h1>
+  <form id="appointment-form"action="/submitApp" method="POST">
+    <label for="date-input">Date:</label>
+    <input type="date" id="date-input" name="date" required><br>
+
+    <label for="time-input">Time:</label>
+    <input type="time" id="time-input" name="time"><br>
+
+    <label for="doctor-select">Doctor:</label>
+    
+    
+    <select id="doctor-select" name="doctor" required>
+      <option value="">Select a doctor</option>
+      <option value="1">Dr. Ali Amour-Cardiology</option>
+      <option value="2">Dr. Nawfal-Pediatrics</option>
+      <option value="3">Dr. Shaaban-Surgeon</option>
+      <option value="2">Dr. Fatma-Gynecologist</option>
+      
+    </select> 
+    <br>
+
+    <button type="submit">Submit</button>
+  </form>
+  <table id="Appointment-table">
+    <thead>
+      <tr>
+        <th>date</th>
+        <th>time</th>
+        <th>doctor</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <% appointment.forEach(function(reg) { %>
+        <tr data-id="<%= reg.id %>">
+          <td><%= reg.date %></td>
+          <td><%= reg.time %></td>
+          <td><%= reg.doctor %></td>
+         
+          <td>
+            <button class="edit-button" data-id="<%= reg.id %>">Edit</button>
+            <form class="delete-form" method="POST" action="/delete">
+              <input type="hidden" name="row-id" value="<%= reg.id %>">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <script src="/appo.js"></script>
+</body>
+</html>
